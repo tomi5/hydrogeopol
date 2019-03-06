@@ -1,4 +1,3 @@
-
 /* TO DO
 
 * - nawigacja pionowa - dopasowac do okien o mniejszej wysokości
@@ -43,7 +42,7 @@ body {
 	filter: blur(5px);
 }
 
-.btn{
+.btn {
 	position: relative;
 	align-self: center;
 	padding: 10px 30px;
@@ -79,8 +78,8 @@ header.section--header::before,
 header.section--header::after,
 section.section--qualities::before,
 section.section--qualities::after,
-footer.section--footer::before,
-footer.section--footer::after {
+address.section--contact::before,
+address.section--contact::after {
 	position: absolute;
 	content: "";
 	top: 0;
@@ -91,7 +90,7 @@ footer.section--footer::after {
 
 header.section--header::before,
 section.section--qualities::before,
-footer.section--footer::before {
+address.section--contact::before {
 	background-color: #fff;
 	opacity: 0.8;
 	z-index: -1;
@@ -479,16 +478,17 @@ section.section--qualities::after {
 
 /*
 	===========================
-	SECTIONS - FOOTER
+	SECTIONS - CONTACT
 	===========================
 */
 
 
-footer.section--footer {
+address.section--contact {
 	position: relative;
+	padding-bottom: 0;
 }
 
-footer.section--footer::after {
+address.section--contact::after {
 	background-color: #fff;
 	opacity: 0.8;
 	background: url("../img/section_contact_banner.jpg") no-repeat;
@@ -499,24 +499,24 @@ footer.section--footer::after {
 	z-index: -2;
 }
 
-container--adress {
-	position: relative;
+.container--adress {
+	margin-top: 0;
+	width: 100%;
 }
 
 .container--form,
-.container--details
-{
+.container--details {
 	align-items: center;
 	margin-top: 0px;
 	flex-direction: column;
 	font-style: normal;
-	}
-	
-.title--form {	
-	text-align: center;
-	    width: 100%;
+}
 
-	}	
+.title--form {
+	text-align: center;
+	width: 100%;
+
+}
 
 form {
 	flex-wrap: wrap;
@@ -530,80 +530,134 @@ form {
 	flex-basis: 20%;
 	text-align: right;
 }
-.input
-{	display: block;
-flex-basis: 75%;
-margin: 10px 0;
-padding: 10px 5px;
-		font-size: 1.4rem;
-		text-align: left;
-		font-family: 'Roboto Condensed', sans-serif;
-		border: none;
-		box-shadow: 0px 0px 1px 0px #4a4a4a;
-	}
-	.input::placeholder{
-		font-size: 1.4rem;
-		font-style: italic;
-		font-family: 'Roboto Condensed', sans-serif;
-		text-align: left;
-}
-	.input:focus{
-		border: 1px solid rgb(228, 57, 48);
+
+.input {
+	display: block;
+	flex-basis: 75%;
+	margin: 10px 0;
+	padding: 10px 5px;
+	font-size: 1.4rem;
+	text-align: left;
+	font-family: 'Roboto Condensed', sans-serif;
+	border: none;
+	box-shadow: 0px 0px 1px 0px #4a4a4a;
 }
 
+.input::placeholder {
+	font-size: 1.4rem;
+	font-style: italic;
+	font-family: 'Roboto Condensed', sans-serif;
+	text-align: left;
+}
 
-	.form__button {
-		display: block;
-		flex-basis: 70%;
-	}
-	
-	
-	.btn--form {
-		margin: 15px 0 30px;
-    padding: 5px 30px;
+.input:focus {
+	border: 1px solid rgb(228, 57, 48);
+}
+
+.btn--form {
+	margin: 15px 0 30px;
+	padding: 5px 30px;
 	border-radius: 30px;
-	}
-	.container--details {
-		margin-top: 20px;
-	}
-	
-.detail__name {
-		font-size: 2.2rem;
-		color: rgb(228, 57, 48);
-		text-transform: uppercase;
-	}
-	
-.detail__subname {
-		    width: 85%;
-    font-size: 1.8rem;
-    align-self: center;
 }
 
+.container--details {
+	margin-top: 20px;
+}
 
 .container--details>* {
-		padding: 10px 0;
-	}
-	
-.container--details > p {
-		font-size: 1.6rem;
+	padding: 10px 0;
+	font-size: 1.6rem;
+	letter-spacing: 1px;
+}
+
+.detail__name {
+	font-size: 2.2rem;
+	color: rgb(228, 57, 48);
+	text-transform: uppercase;
+}
+
+.detail__subname {
+	width: 85%;
+	font-size: 1.8rem;
+	align-self: center;
+	margin-bottom: 20px;
+}
+
+.post {
+	margin: 20px 0;
+}
+
+.fax {
+	margin-bottom: 20px;
+}
+
+.person {
+	font-weight: bold;
+	font-size: 1.8rem;
+	line-height: 1.5;
 }
 
 .mail {
-	cursor: pointer;
+	display: block;
 	font-size: 1.6rem;
+	font-weight: normal;
 	text-decoration: none;
 	color: rgb(228, 57, 48);
-}
-	
+	text-decoration: none;
 
-	
+}
+
+.mail span {
+	display: block;
+	padding: 5px;
+	font-size: 3rem;
+	font-weight: bold;
+	color: #4a4a4a;
+}
+
+.post span,
+.phone span,
+.fax span {
+	display: inline-block;
+	padding: 5px 10px;
+	font-size: 2rem;
+	color: #4a4a4a;
+}
+
+.container--map {
+	width: 100vw;
+	height: 10vh;
+	min-height: 200px;
+	margin: 0;
+	padding: 0;
+	filter: grayscale(1);
+
+}
+
 .map {
-	position: absolute;
-	bottom: 0;
-	left: 0;
 	width: 100%;
+	height: 100%;
 	border: none;
-	filter: grayscale(100)
+}
+
+
+/*
+	===========================
+	SECTIONS - FOOTER
+	===========================
+*/
+
+.footer {
+	width: 100%;
+	font-size: 1.6rem;
+	padding: 20px 0;
+}
+
+.footer a {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+	font-weight: bold;
 }
 
 @media (min-width: 359px) {
