@@ -1,3 +1,13 @@
+
+/* TO DO
+
+* - nawigacja pionowa - dopasowac do okien o mniejszej wysokości
+* - Media dla landscape
+
+*/
+
+
+
 /*
 	===========================
 	GLOBAL SETTINGS
@@ -31,6 +41,20 @@ body {
 
 .blur {
 	filter: blur(5px);
+}
+
+.btn{
+	position: relative;
+	align-self: center;
+	padding: 10px 30px;
+	font-size: 2rem;
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+	cursor: pointer;
+	background-color: rgb(228, 57, 48);
+	overflow: hidden;
+	border: none;
 }
 
 
@@ -129,19 +153,6 @@ header.section--header::after {
 	color: #000;
 }
 
-.btn--header {
-	position: relative;
-	align-self: center;
-	padding: 10px 30px;
-	font-size: 2rem;
-	color: #fff;
-	text-transform: uppercase;
-	text-decoration: none;
-	cursor: pointer;
-	background-color: rgb(228, 57, 48);
-	overflow: hidden;
-
-}
 
 .btn--header::before,
 .btn--header::after {
@@ -172,6 +183,7 @@ header.section--header::after {
 .btn--header:hover::after {
 	right: 0px;
 }
+
 
 /* menu - hidden on mobile*/
 .nav {
@@ -467,7 +479,7 @@ section.section--qualities::after {
 
 /*
 	===========================
-	SECTIONS - SERVICES
+	SECTIONS - FOOTER
 	===========================
 */
 
@@ -487,8 +499,111 @@ footer.section--footer::after {
 	z-index: -2;
 }
 
+container--adress {
+	position: relative;
+}
+
+.container--form,
+.container--details
+{
+	align-items: center;
+	margin-top: 0px;
+	flex-direction: column;
+	font-style: normal;
+	}
+	
+.title--form {	
+	text-align: center;
+	    width: 100%;
+
+	}	
+
+form {
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: baseline;
+}
+
+.label {
+	display: block;
+	font-size: 1.4rem;
+	flex-basis: 20%;
+	text-align: right;
+}
+.input
+{	display: block;
+flex-basis: 75%;
+margin: 10px 0;
+padding: 10px 5px;
+		font-size: 1.4rem;
+		text-align: left;
+		font-family: 'Roboto Condensed', sans-serif;
+		border: none;
+		box-shadow: 0px 0px 1px 0px #4a4a4a;
+	}
+	.input::placeholder{
+		font-size: 1.4rem;
+		font-style: italic;
+		font-family: 'Roboto Condensed', sans-serif;
+		text-align: left;
+}
+	.input:focus{
+		border: 1px solid rgb(228, 57, 48);
+}
+
+
+	.form__button {
+		display: block;
+		flex-basis: 70%;
+	}
+	
+	
+	.btn--form {
+		margin: 15px 0 30px;
+    padding: 5px 30px;
+	border-radius: 30px;
+	}
+	.container--details {
+		margin-top: 20px;
+	}
+	
+.detail__name {
+		font-size: 2.2rem;
+		color: rgb(228, 57, 48);
+		text-transform: uppercase;
+	}
+	
+.detail__subname {
+		    width: 85%;
+    font-size: 1.8rem;
+    align-self: center;
+}
+
+
+.container--details>* {
+		padding: 10px 0;
+	}
+	
+.container--details > p {
+		font-size: 1.6rem;
+}
+
+.mail {
+	cursor: pointer;
+	font-size: 1.6rem;
+	text-decoration: none;
+	color: rgb(228, 57, 48);
+}
+	
+
+	
 .map {
-	filter: grayscale(100%) contrast(100%)
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	border: none;
+	filter: grayscale(100)
 }
 
 @media (min-width: 359px) {
@@ -518,7 +633,7 @@ footer.section--footer::after {
 		font-size: 2.5em;
 	}
 
-	.btn--header {
+	.btn {
 		font-size: 2.5rem;
 	}
 }
@@ -731,7 +846,7 @@ footer.section--footer::after {
 		padding-right: 50px;
 	}
 
-	.btn--header {
+	.btn {
 		margin-bottom: 20px;
 	}
 
@@ -851,7 +966,7 @@ footer.section--footer::after {
 		padding-right: 0;
 	}
 
-	.btn--header {
+	.btn {
 		padding: 20px 45px;
 		font-size: 3rem;
 	}
