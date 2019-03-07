@@ -656,7 +656,7 @@ form {
 	font-weight: bold;
 }
 
-@media (min-width: 359px) {
+@media (min-width: 359px) and (orientation: portrait) {
 
 	.header__h1 {
 		font-size: 4.5rem;
@@ -667,7 +667,7 @@ form {
 	}
 }
 
-@media (min-width: 400px) {
+@media (min-width: 400px) and (orientation: portrait) {
 
 	.nav.active {
 		left: 0;
@@ -698,7 +698,7 @@ form {
 
 }
 
-@media (min-width: 500px) {
+@media (min-width: 500px)  and (orientation: portrait) {
 
 	header.section--header {
 		position: relative;
@@ -838,7 +838,7 @@ form {
 } */
 
 
-@media (min-width: 600px) {
+@media (min-width: 600px)  and (orientation: portrait) {
 	.nav.active {
 		right: 75%;
 	}
