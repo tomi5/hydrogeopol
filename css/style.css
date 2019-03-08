@@ -79,8 +79,8 @@ header.section--header::before,
 header.section--header::after,
 section.section--qualities::before,
 section.section--qualities::after,
-address.section--contact::before,
-address.section--contact::after {
+section.section--contact::before,
+section.section--contact::after {
 	position: absolute;
 	content: "";
 	top: 0;
@@ -91,7 +91,7 @@ address.section--contact::after {
 
 header.section--header::before,
 section.section--qualities::before,
-address.section--contact::before {
+section.section--contact::before {
 	background-color: #fff;
 	opacity: 0.8;
 	z-index: -1;
@@ -478,12 +478,12 @@ section.section--qualities::after {
 */
 
 
-address.section--contact {
+section.section--contact {
 	position: relative;
 	padding: 40px 0 0;
 }
 
-address.section--contact::after {
+section.section--contact::after {
 	background-color: #fff;
 	opacity: 0.8;
 	background: url("../img/section_contact_banner.jpg") no-repeat;
@@ -493,19 +493,24 @@ address.section--contact::after {
 	z-index: -2;
 }
 
-.container--adress {
+.container--contact {
 	margin-top: 0;
 	width: 100%;
 }
 
 .container--form,
-.container--details {
+.container--address {
 	align-items: center;
 	margin-top: 0px;
 	padding: 0 10px;
 	flex-direction: column;
 	font-style: normal;
 }
+
+.container--address {
+	margin: 20px 0;
+}
+
 
 .title--form {
 	text-align: center;
@@ -555,44 +560,44 @@ form {
 	border-radius: 30px;
 }
 
-.container--details {
-	margin-top: 20px;
-}
 
-.container--details>* {
+.container--address>* {
 	padding: 10px 0;
 	font-size: 1.6rem;
 	letter-spacing: 1px;
 }
 
-.detail__name {
+.address__name {
 	font-size: 2.2rem;
 	color: rgb(228, 57, 48);
 	text-transform: uppercase;
+	font-weight: bold;
 }
 
-.detail__subname {
+.address__subname {
 	width: 85%;
 	font-size: 1.8rem;
 	align-self: center;
 	margin-bottom: 20px;
+	font-weight: bold;
 }
 
-.post {
+.address__post {
 	margin: 20px 0;
 }
 
-.fax {
+.address__fax {
 	margin-bottom: 20px;
 }
 
-.person {
+.address__person {
 	font-weight: bold;
 	font-size: 1.8rem;
 	line-height: 1.5;
 }
 
-.mail {
+.address__mail,
+.person__mail {
 	display: block;
 	font-size: 1.6rem;
 	font-weight: normal;
@@ -602,7 +607,8 @@ form {
 
 }
 
-.mail span {
+.address__mail span,
+.person__mail span {
 	display: block;
 	padding: 5px;
 	font-size: 3rem;
@@ -610,9 +616,9 @@ form {
 	color: #4a4a4a;
 }
 
-.post span,
-.phone span,
-.fax span {
+.address__post span,
+.address__phone span,
+.address__fax span {
 	display: inline-block;
 	padding: 5px 10px;
 	font-size: 2rem;
@@ -743,15 +749,16 @@ form {
 		font-size: 1.6rem;
 	}
 
-	.container--adress,
+	.container--contact,
 	.container--form,
 	.container--map {
 		margin: 0;
 	}
 
-	.phone,
-	.fax,
-	.mail {
+	.address__phone,
+	.address__fax,
+	.address__mail,
+	.person__mail{
 		font-size: 1.8rem;
 	}
 
@@ -1008,7 +1015,7 @@ form {
 		margin: 50px;
 	}
 
-	.container--adress,
+	.container--details,
 	.container--form {
 		margin: 0;
 	}
@@ -1052,7 +1059,7 @@ form {
 	}
 
 	.btn--form:hover {
-		box-shadow: inset 0 0 1px 1px #fff;
+		box-shadow: inset 0 0 8px 1px #fff;
 	}
 
 	.container {
@@ -1064,7 +1071,7 @@ form {
 		flex-basis: 35%;
 	}
 
-	address.section--contact {
+	section.section--contact {
 		padding: 40px 50px 0;
 	}
 
@@ -1084,9 +1091,9 @@ form {
 		flex-basis: 70%;
 	}
 
-	.container--details {
+	.container--address {
 		flex-basis: 40%;
-		margin: 0;
+		margin: 0 0 20px;
 		order: 1;
 	}
 
@@ -1095,10 +1102,10 @@ form {
 		max-width: 2000px;
 		margin: auto;
 	}
-}
 
-.map {
-	width: 100vw;
+	.map {
+		width: 100vw;
+	}
 }
 
 @media (min-width: 1440px) {
