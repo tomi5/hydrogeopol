@@ -390,7 +390,6 @@ section.section--qualities::after {
 	background-size: cover;
 	background-position: 35%;
 	background-attachment: fixed;
-	filter: grayscale(100%);
 	z-index: -2;
 }
 
@@ -491,7 +490,6 @@ address.section--contact::after {
 	background-size: cover;
 	background-position: 35%;
 	background-attachment: fixed;
-	filter: grayscale(100%);
 	z-index: -2;
 }
 
@@ -656,7 +654,7 @@ form {
 	font-weight: bold;
 }
 
-@media (min-width: 359px) and (orientation: portrait) {
+@media (min-width: 359px) {
 
 	.header__h1 {
 		font-size: 4.5rem;
@@ -667,7 +665,7 @@ form {
 	}
 }
 
-@media (min-width: 400px) and (orientation: portrait) {
+@media (min-width: 400px) {
 
 	.nav.active {
 		left: 0;
@@ -698,7 +696,7 @@ form {
 
 }
 
-@media (min-width: 500px)  and (orientation: portrait) {
+@media (min-width: 500px) {
 
 	header.section--header {
 		position: relative;
@@ -838,7 +836,7 @@ form {
 } */
 
 
-@media (min-width: 600px)  and (orientation: portrait) {
+@media (min-width: 600px) {
 	.nav.active {
 		right: 75%;
 	}
