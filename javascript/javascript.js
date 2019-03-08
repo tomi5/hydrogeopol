@@ -15,3 +15,20 @@ $('.nav__link').on('click', function () {
 		toggleActive();
 	}
 })
+
+// scroll to section
+
+$('.nav__link').on('click', function () {
+	const goToSection = $(this).attr('href');
+	$('body, html').animate({
+		scrollTop: $(goToSection).offset().top
+	}, 1000)
+})
+
+$('.btn--header').on('click', function () {
+	const goToSection = $(this).attr('href');
+	$('body, html').animate({
+		scrollTop: $(goToSection).offset().top
+	}, 1000)
+
+})

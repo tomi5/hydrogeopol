@@ -2,6 +2,7 @@
 
 * - nawigacja pionowa - dopasowac do okien o mniejszej wysokości
 * - Media dla landscape
+*- nawigacja czerony border przy aktywnym
 
 */
 
@@ -32,7 +33,6 @@ html {
 body {
 	overflow-x: hidden;
 }
-
 
 .flex {
 	display: flex;
@@ -72,7 +72,6 @@ header.section--header {
 	min-height: 550px;
 	width: 100%;
 	flex-direction: column;
-
 }
 
 header.section--header::before,
@@ -130,7 +129,6 @@ header.section--header::after {
 	color: rgb(8, 32, 92);
 	font-weight: bold;
 	text-shadow: -.02em -.02em 0 rgb(255, 255, 255), .02em -.02em 0 rgb(255, 255, 255), -.02em .02em 0 rgb(255, 255, 255), .02em .02em 0 rgb(255, 255, 255), 0px .07em .1em rgb(95, 95, 80);
-
 }
 
 .header__h1--red {
@@ -149,36 +147,12 @@ header.section--header::after {
 .header__p {
 	align-self: center;
 	text-transform: uppercase;
+	width: 100%;
 	font-size: 2rem;
 	letter-spacing: 2px;
 	font-weight: bold;
 	color: #000;
 }
-
-
-.btn--header::before,
-.btn--header::after {
-	position: absolute;
-	content: "";
-	top: 0;
-	bottom: 0;
-	left: -20px;
-	border-top: 25px solid transparent;
-	border-bottom: 25px solid transparent;
-	transition: .2s linear;
-}
-
-.btn--header::before {
-	left: -20px;
-	border-left: 20px solid #fff;
-}
-
-.btn--header::after {
-	right: -20px;
-	border-right: 20px solid #fff;
-}
-
-
 
 /* menu - hidden on mobile*/
 .nav {
@@ -231,7 +205,6 @@ header.section--header::after {
 	color: rgb(228, 57, 48);
 	text-transform: uppercase;
 	justify-content: center;
-
 }
 
 .nav__link span {
@@ -341,6 +314,7 @@ header.section--header::after {
 	margin-top: 50px;
 	flex-wrap: wrap;
 	max-width: 1300px;
+
 }
 
 /*
@@ -351,6 +325,7 @@ header.section--header::after {
 
 .text__container--section {
 	flex-direction: column;
+	width: 100%;
 }
 
 .content {
@@ -379,7 +354,6 @@ header.section--header::after {
 	===========================
 */
 
-
 section.section--qualities {
 	position: relative;
 }
@@ -392,6 +366,10 @@ section.section--qualities::after {
 	background-position: 35%;
 	background-attachment: fixed;
 	z-index: -2;
+}
+
+.container--qualities {
+	width: 85%;
 }
 
 .quality {
@@ -438,7 +416,6 @@ section.section--qualities::after {
 	width: 100%;
 	text-align: left;
 	text-transform: uppercase;
-
 }
 
 .title__no {
@@ -446,7 +423,10 @@ section.section--qualities::after {
 	font-size: 2.5rem;
 	font-weight: bold;
 	color: rgb(228, 57, 48);
+}
 
+.container--services {
+	width: 100%;
 }
 
 .service__list {
@@ -466,7 +446,7 @@ section.section--qualities::after {
 .service__list li::before {
 	font-family: 'Font Awesome 5 Free';
 	content: "\f00c";
-    font-weight: 900;
+	font-weight: 900;
 	color: rgb(228, 57, 48);
 	position: absolute;
 	top: 5px;
@@ -478,7 +458,6 @@ section.section--qualities::after {
 	SECTIONS - CONTACT
 	===========================
 */
-
 
 section.section--contact {
 	position: relative;
@@ -513,17 +492,16 @@ section.section--contact::after {
 	margin: 20px 0;
 }
 
-
 .title--form {
 	text-align: center;
 	width: 100%;
-
 }
 
 form {
 	flex-wrap: wrap;
 	justify-content: space-around;
 	align-items: baseline;
+	width: 100%;
 }
 
 .label {
@@ -642,7 +620,6 @@ form {
 	border: none;
 }
 
-
 /*
 	===========================
 	SECTIONS - FOOTER
@@ -760,7 +737,7 @@ form {
 	.address__phone,
 	.address__fax,
 	.address__mail,
-	.person__mail{
+	.person__mail {
 		font-size: 1.8rem;
 	}
 
@@ -889,14 +866,15 @@ form {
 }
 
 @media (min-width: 750px) {
-	
+
 	header.section--header::after {
-	background: url("../img/main_banner_bw_big.jpg") no-repeat;
-	background-size: cover;
-	background-position: 35%;
-	background-attachment: fixed;
-	
-}
+		background: url("../img/main_banner_bw_big.jpg") no-repeat;
+		background-size: cover;
+		background-position: 35%;
+		background-attachment: fixed;
+
+	}
+
 	.nav.active {
 		right: 80%;
 	}
@@ -927,25 +905,25 @@ form {
 		justify-content: space-between;
 
 	}
-	
-section.section--qualities::after {
+
+	section.section--qualities::after {
 		background: url("../img/section_qualities_banner_small.jpg") no-repeat;
-	background-size: cover;
+		background-size: cover;
 		background-attachment: fixed;
-	background-position: 35%;
-}
+		background-position: 35%;
+	}
 
 	.quality {
 		flex-basis: 45%;
 		margin-bottom: 40px;
 	}
 
-section.section--contact::after {
-	background: url("../img/section_contact_banner_big.jpg") no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
-    background-position: 35%;
-}
+	section.section--contact::after {
+		background: url("../img/section_contact_banner_big.jpg") no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: 35%;
+	}
 }
 
 @media (min-width: 900px) {
@@ -968,7 +946,7 @@ section.section--contact::after {
 		bottom: 0;
 		right: 5%;
 		height: 13vh;
-		min-height: 50px;
+		min-height: 80px;
 		max-width: 1300px;
 		margin: auto;
 	}
@@ -1071,22 +1049,12 @@ section.section--contact::after {
 		padding-right: 80px;
 	}
 
-
-	.btn--header:hover::before {
-		left: 0px;
-	}
-
-	.btn--header:hover::after {
-		right: 0px;
-	}
-
-	.btn--form:hover {
+	.btn:hover {
 		box-shadow: inset 0 0 8px 1px #fff;
 	}
 
 	.container {
 		justify-content: space-around;
-
 	}
 
 	.quality {
@@ -1150,14 +1118,6 @@ section.section--contact::after {
 		font-size: 3rem;
 	}
 
-
-	.btn--header::before,
-	.btn--header::after {
-		border-top: 38px solid transparent;
-		border-bottom: 38px solid transparent;
-
-	}
-
 	.nav__item {
 		font-size: 2.5rem;
 	}
@@ -1166,14 +1126,12 @@ section.section--contact::after {
 		font-size: 3.5rem;
 	}
 
-
 	.nav__item:hover {
-		font-size: 3.5rem;
+		font-size: 3rem;
 	}
 
 	.nav__item:hover .nav__link span {
-		font-size: 4.5rem;
+		font-size: 4rem;
 	}
-
 
 }
