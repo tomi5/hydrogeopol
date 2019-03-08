@@ -100,7 +100,7 @@ section.section--contact::before {
 header.section--header::after {
 	background-color: #fff;
 	opacity: 0.8;
-	background: url("../img/main_banner_bw.jpg") no-repeat;
+	background: url("../img/main_banner_bw_small.jpg") no-repeat;
 	background-size: cover;
 	background-position: 35%;
 	background-attachment: fixed;
@@ -108,6 +108,7 @@ header.section--header::after {
 }
 
 .logo {
+	width: 100%;
 	max-width: 90px;
 	height: auto;
 }
@@ -386,7 +387,7 @@ section.section--qualities {
 section.section--qualities::after {
 	background-color: #fff;
 	opacity: 0.8;
-	background: url("../img/section_qualities_banner.jpg") no-repeat;
+	background: url("../img/section_qualities_banner_small.jpg") no-repeat;
 	background-size: cover;
 	background-position: 35%;
 	background-attachment: fixed;
@@ -486,7 +487,7 @@ section.section--contact {
 section.section--contact::after {
 	background-color: #fff;
 	opacity: 0.8;
-	background: url("../img/section_contact_banner.jpg") no-repeat;
+	background: url("../img/section_contact_banner_small.jpg") no-repeat;
 	background-size: cover;
 	background-position: 35%;
 	background-attachment: fixed;
@@ -887,6 +888,14 @@ form {
 }
 
 @media (min-width: 750px) {
+	
+	header.section--header::after {
+	background: url("../img/main_banner_bw_big.jpg") no-repeat;
+	background-size: cover;
+	background-position: 35%;
+	background-attachment: fixed;
+	
+}
 	.nav.active {
 		right: 80%;
 	}
@@ -917,13 +926,25 @@ form {
 		justify-content: space-between;
 
 	}
+	
+section.section--qualities::after {
+		background: url("../img/section_qualities_banner_small.jpg") no-repeat;
+	background-size: cover;
+		background-attachment: fixed;
+	background-position: 35%;
+}
 
 	.quality {
 		flex-basis: 45%;
 		margin-bottom: 40px;
 	}
 
-
+section.section--contact::after {
+	background: url("../img/section_contact_banner_big.jpg") no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+    background-position: 35%;
+}
 }
 
 @media (min-width: 900px) {
@@ -1123,7 +1144,7 @@ form {
 		padding-right: 0;
 	}
 
-	.btn {
+	.btn--header {
 		padding: 20px 45px;
 		font-size: 3rem;
 	}
