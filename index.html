@@ -1,10 +1,3 @@
-<!-- TO DO
-* cookies
-* form php
-* IE support
--->
-
-
 <!DOCTYPE html>
 <html lang="pl">
 
@@ -29,14 +22,14 @@
 
     <nav class="nav">
         <ul class="nav__list flex">
-            <li class="nav__item flex"><a href="#home" class="nav__link" role="button" aria-pressed="true" tabindex=1><span class="fas fa-home"></span>Home</a></li>
-            <li class="nav__item flex"><a href="#about" class="nav__link" role="button" aria-pressed="true" tabindex=2><span class="far fa-lightbulb"></span>O nas</a></li>
-            <li class="nav__item flex"><a href="#services" class="nav__link" role="button" aria-pressed="true" tabindex=3><span class="fas fa-cogs"></span>Usługi</a></li>
-            <li class="nav__item flex"><a href="#contact" class="nav__link" role="button" aria-pressed="true" tabindex=4><span class="fas fa-envelope"></span>Kontakt</a></li>
+            <li class="nav__item nav__item--home active flex"><a href="#home" class="nav__link" role="button" aria-pressed="true" tabindex=1><span class="fas fa-home"></span>Home</a></li>
+            <li class="nav__item nav__item--about flex"><a href="#about" class="nav__link" role="button" aria-pressed="true" tabindex=2><span class="far fa-lightbulb"></span>O nas</a></li>
+            <li class="nav__item nav__item--services flex"><a href="#services" class="nav__link" role="button" aria-pressed="true" tabindex=3><span class="fas fa-cogs"></span>Usługi</a></li>
+            <li class="nav__item nav__item--contact flex"><a href="#contact" class="nav__link" role="button" aria-pressed="true" tabindex=4><span class="fas fa-envelope"></span>Kontakt</a></li>
         </ul>
     </nav>
 
-    <button class="burger" type="button">
+    <button class="burger no--js" type="button">
         <span class="burger__bar burger__bar--bar1"></span>
         <span class="burger__bar burger__bar--bar2"></span>
         <span class="burger__bar burger__bar--bar3"></span>
@@ -44,7 +37,7 @@
 
 
     <header id="home" class="section section--header flex">
-        <div class="logo__container"><img src="img/logo.png" alt="logo firmy" class="logo"></div>
+        <img src="img/logo.png" alt="logo firmy" class="logo">
         <div class="text__container text__container--header flex">
             <h1 class="header__h1">Hydro<span  class="header__h1--red">geopol</span></h1>
             <p class="header__p">przedsiębiorstwo hydrogeologiczne w dębicy</p>
@@ -74,13 +67,13 @@
                 </div>
             </div>
             <div class="img__container img__container--about">
-                <img class="img img--about" src="img/monitor.png" alt="">
+                <img class="img--about" src="img/monitor.png" alt="">
             </div>
         </section>
 
-        <section id="services" class="section section--qualities flex">
+        <section class="section section--qualities flex">
             <h2 class="section__title">Co wyróżnia Hydrogeopol</h2>
-            <ul class="container container--qualities flex">
+            <ul class="container container--qualities no--js flex">
                 <li class="quality flex"><span class="fas fa-medal" aria-hidden="true"></span>wysoka jakość usług</li>
                 <li class="quality flex"><span class="fas fa-globe-europe" aria-hidden="true"></span>zasięg usług na
                     cały kraj</li>
@@ -94,7 +87,7 @@
 
         </section>
 
-        <section class="section section--services flex">
+        <section id="services" class="section section--services flex">
             <h2 class="section__title">Nasze usługi</h2>
 
             <div class="container container--services flex">
@@ -102,7 +95,7 @@
                     <span class="title__no">1.</span>
                     <h3 class=" service__title">Prace projektowe i dokumentacyjne
                         wraz z wykonawstwem w zakresie</h3>
-                    <ul class="service__list">
+                    <ul class="service__list no--js">
                         <li>wiertnictwa</li>
                         <li>geologii, geotechniki</li>
                         <li>ochrony środowiska</li>
@@ -115,7 +108,7 @@
                     <span class="title__no">2.</span>
                     <h3 class="service__title">Wykonujemy następujące opracowania
                         geologiczne</h3>
-                    <ul class="service__list">
+                    <ul class="service__list no--js">
                         <li>projekty studni głębinowych</li>
                         <li>projekty badań hydrogeologicznych i geologiczno-inżynierskich</li>
                         <li>typowanie terenów pod wysypiska śmieci i odpadów przemysłowych łącznie z badaniami
@@ -136,8 +129,8 @@
 
                 <div class="service flex">
                     <span class="title__no">3.</span>
-                    <h3 class="service__title">Prace wiernicze</h3>
-                    <ul class="service__list">
+                    <h3 class="service__title">Prace wiertnicze</h3>
+                    <ul class="service__list no--js">
                         <li>wiercenia studni głębinowych</li>
                         <li>wiercenia otworów obserwacyjnych dla monitoringu wód gruntowych</li>
                         <li>wiercenia geologiczno-inżynierskie i geotechniczne</li>
@@ -161,7 +154,7 @@
                 <div class="service flex">
                     <span class="title__no">4.</span>
                     <h3 class="service__title">Usługi warsztatowe</h3>
-                    <ul class="service__list">
+                    <ul class="service__list no--js">
                         <li>remonty urządzeń wiertniczych</li>
                         <li>wykonawstwo filtrów do studni wierconych i otworów obserwacyjnych z rur PCV</li>
                         <li>prace spawalnicze, tokarskie, ślusarskie</li>
@@ -171,7 +164,6 @@
             </div>
         </section>
 
-        <!-- <section class="section section--gallery flex"></section> -->
     </main>
     <section id="contact" class="section section--contact flex">
         <div class="container container--contact flex">
@@ -179,26 +171,24 @@
 
             <div class="container container--form flex">
                 <h2 class="section__title title--form">Napisz do nas</h2>
-                <form class="form flex" action="#" method="post">
+                <form class="form flex" action="email_form.php" method="post">
 
                     <label class="label" for="name">Imię*</label>
-                    <input class="input" type="text" id="name" name="user_name" placeholder="wpisz swóje imię" required>
-                    <label class="label" for="mail">E-mail*</label>
-                    <input class="input" type="email" id="mail" name="user_email" placeholder="wpisz swój e-mail"
-                        required>
+                    <input class="input" type="text" id="name" name="name" placeholder="wpisz swóje imię" required>
+                    <label class="label" for="email">E-mail*</label>
+                    <input class="input" type="email" id="email" name="email" placeholder="wpisz swój e-mail" required>
                     <label class="label" for="msg">Wiadomość*</label>
-                    <textarea class="input input--msg" id="msg" name="user_message" placeholder="napisz wiadomość"
-                        required rows='5'></textarea>
-                    <button class="btn btn--form" type="submit">Wyślij</button>
-
+                    <textarea class="input input--msg" id="msg" name="msg" placeholder="napisz wiadomość" required rows='5'></textarea>
+                    <button class="btn btn--form" type="submit" name="submit">Wyślij</button>
                 </form>
+
             </div>
 
             <address class="container container--address flex">
                 <p class="address__name">Hydrogeopol sp. z o.o.</p>
                 <p class="address__subname">Przedsiębiorstwo hydrogeologiczne w Dębicy.</p>
-                <p class="address_tax">NIP 872-000-35-51</p>
-                <p class="address__tax">REGON 850036860</p>
+                <p>NIP 872-000-35-51</p>
+                <p>REGON 850036860</p>
                 <p class="address__post"><span class="fas fa-map-marker-alt"></span>39-200 Dębica, ul.Rzeszowska 131</p>
                 <p class="address__phone"><span class="fas fa-phone"></span>014 681 36 56</p>
                 <p class="address__fax"><span class="fas fa-fax"></span>014 681 31 35</p>
@@ -208,12 +198,12 @@
             </address>
 
             <div class="container container--map">
-                <iframe defer class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2745.521931419766!2d21.428815740503357!3d50.05515537201589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473d09824ab57b27%3A0x3bd5042c8fe603d4!2sHydrogeopol+Sp.+z+o.o.+Przedsi%C4%99biorstwo+hydrogeologiczne!5e0!3m2!1spl!2spl!4v1518347039976"></iframe>
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2745.521931419766!2d21.428815740503357!3d50.05515537201589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473d09824ab57b27%3A0x3bd5042c8fe603d4!2sHydrogeopol+Sp.+z+o.o.+Przedsi%C4%99biorstwo+hydrogeologiczne!5e0!3m2!1spl!2spl!4v1518347039976"></iframe>
             </div>
         </div>
     </section>
 
-    <footer class="footer">Copyright &copy; <a href="https://github.com/tomi5" target="blank">Tomasz Rysak</a>
+    <footer class="footer">Copyright &copy; <a href="https://github.com/tomi5" target="blank" class="footer__link">Tomasz Rysak</a>
         2019</footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

@@ -1,12 +1,11 @@
 /* TO DO
-
+* RODO
+* form php
 * - nawigacja pionowa - dopasowac do okien o mniejszej wysokości
 * - Media dla landscape
-*- nawigacja czerony border przy aktywnym
+* page 404
 
 */
-
-
 
 /*
 	===========================
@@ -32,6 +31,7 @@ html {
 
 body {
 	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 
 .flex {
@@ -160,7 +160,7 @@ header.section--header::after {
 	top: 10%;
 	left: -100%;
 	bottom: 10%;
-	right: 100%;
+	right: 120%;
 	z-index: 999;
 	transition: .3s;
 }
@@ -170,7 +170,6 @@ header.section--header::after {
 	left: 0;
 	right: 60%;
 	min-height: 500px;
-	overflow: hidden;
 }
 
 .nav__list {
@@ -187,6 +186,25 @@ header.section--header::after {
 	font-size: 2rem;
 	cursor: pointer;
 	background-color: rgba(250, 250, 250, .8);
+	transition: .3s;
+}
+
+.nav__item.active {
+	box-shadow: 3px 0px 0px 0px red;
+	transition: .3s;
+}
+
+.nav__item.active::after {
+	position: absolute;
+	top: 50%;
+	left: 100%;
+	transform: translateY(-50%);
+	content: "";
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 12px 0 12px 12px;
+	border-color: transparent transparent transparent rgb(228, 57, 48);
 	transition: .3s;
 }
 
@@ -245,6 +263,11 @@ header.section--header::after {
 	transform: rotate(90deg);
 }
 
+/* when js is disabled - class removed by JS */
+.burger.no--js {
+	display: none;
+}
+
 .burger__bar {
 	position: absolute;
 	width: 100%;
@@ -276,7 +299,6 @@ header.section--header::after {
 
 .burger.active .burger__bar--bar2 {
 	opacity: 0;
-
 	transition: 0s;
 }
 
@@ -370,6 +392,17 @@ section.section--qualities::after {
 
 .container--qualities {
 	width: 85%;
+	opacity: 0;
+}
+
+.container--qualities.active {
+	opacity: 1;
+	transition: 2s;
+}
+
+/* when js is disabled - class removed by JS */
+.container--qualities.no--js {
+	opacity: 1;
 }
 
 .quality {
@@ -381,6 +414,7 @@ section.section--qualities::after {
 	font-weight: bold;
 	text-align: left;
 }
+
 
 .quality span {
 	display: block;
@@ -435,6 +469,17 @@ section.section--qualities::after {
 	display: block;
 	font-size: 1.6rem;
 	letter-spacing: 1px;
+	opacity: 0;
+}
+
+.service__list.active {
+	opacity: 1;
+	transition: 1s;
+}
+
+/* when js is disabled - class removed by JS */
+.service__list.no--js {
+	opacity: 1;
 }
 
 .service__list li {
@@ -632,7 +677,7 @@ form {
 	padding: 20px 0;
 }
 
-.footer a {
+.footer__link {
 	text-decoration: none;
 	color: inherit;
 	cursor: pointer;
@@ -960,6 +1005,20 @@ form {
 		border-bottom: none;
 		font-size: 1.5rem;
 	}
+
+	.nav__item.active {
+		box-shadow: 0 -3px 0 0 red;
+		border-right: 1px solid #999;
+	}
+
+	.nav__item.active::after {
+		top: 0%;
+		left: 50%;
+		transform: translate(-50%, -100%);
+		border-width: 0px 12px 12px 12px;
+		border-color: transparent transparent rgb(228, 57, 48) transparent;
+	}
+
 
 	.nav__item:nth-last-of-type(1) {
 		border-right: none;
