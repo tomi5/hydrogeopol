@@ -10,7 +10,6 @@ $(document).ready(function () {
 function toggleActive() {
 	$('.burger').toggleClass('active');
 	$('nav').toggleClass('active');
-	$('.burger__bar').removeClass('dark');
 	$('.section').toggleClass('blur');
 }
 
@@ -21,6 +20,14 @@ $('.nav__link').on('click', function () {
 		toggleActive();
 	}
 })
+
+// desactive mobile menu when window is resizing
+$(window).resize(function () {
+	$('.burger').removeClass('active');
+	$('nav').removeClass('active');
+	$('.section').removeClass('blur');
+});
+
 
 // scroll to section
 
@@ -46,20 +53,31 @@ $(document).on('scroll', function () {
 	const $scrollValue = $(this).scrollTop();
 	const $windowHeight = $(window).height();
 	const $qualitiesFromTop = $('.container--qualities').offset().top;
-	const $listFromTop = $('.service__list').offset().top;
+	const $list1FromTop = $('.service__list--a').offset().top;
+	const $list2FromTop = $('.service__list--b').offset().top;
+	const $list3FromTop = $('.service__list--c').offset().top;
+	const $list4FromTop = $('.service__list--d').offset().top;
 
 	if ($scrollValue > $qualitiesFromTop - $windowHeight / 2) {
 		$('.container--qualities').addClass('active');
 	}
-	if ($scrollValue > $listFromTop - $windowHeight / 2) {
-		$('.service__list').addClass('active');
+	if ($scrollValue > $list1FromTop - $windowHeight / 2) {
+		$('.service__list--a').addClass('active');
+	}
+	if ($scrollValue > $list2FromTop - $windowHeight / 2) {
+		$('.service__list--b').addClass('active');
+	}
+	if ($scrollValue > $list3FromTop - $windowHeight / 2) {
+		$('.service__list--c').addClass('active');
+	}
+	if ($scrollValue > $list4FromTop - $windowHeight / 2) {
+		$('.service__list--d').addClass('active');
 	}
 	if ($scrollValue < 300) {
 		$('.container--qualities').removeClass('active')
-		$('.service__list').removeClass('active'); // czyszczyciel
+		$('.service__list').removeClass('active'); // cleaner
 	}
 })
-
 
 //menu active possition
 
