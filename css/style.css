@@ -194,7 +194,7 @@ header.section--header::after {
 .nav__item {
 	position: relative;
 	-ms-flex-preferred-size: 22%;
-	flex-basis: 22%;
+	flex-basis: 25%;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
