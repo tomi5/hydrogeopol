@@ -8,8 +8,7 @@
     <title>HYDROGEOPOL - przedsiębiorstwo hydrogeologiczne w Dębicy</title>
     <meta name="keywords" content="hydrogeopol, studnie głębinowe, geologia, badania geologiczne, wiercenia, otwory techniczne, wody podziemne, studnie, Urząd Górniczy, wiercenia złożowe, wiercenia surowcowe, renowacja studnim, czyszczenie studni, pompowanie odwadniające" />
     <meta name="description" content="Hydrogeopol - firma oferująca usługi związane z wykonawstwem studni głębinowych (ujęć wody) zaopatrujących w wodę miasta, gminy zakłady przemysłowe i gospodarstwa rolne." />
-    <meta name="revised" content="Tomasz Rysak - actualization 11/03/2019">
-    <link href="img/favicon.png" rel="shortcut icon" />
+    <link href="img/favicon.png" rel="icon" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&amp;subset=latin-ext" rel="stylesheet">
@@ -21,33 +20,33 @@
 <body>
 
     <nav class="nav">
+		
+		<button class="burger no--js" type="button" aria-label="menu" aria-expanded="false">
+			<span class="burger__bar burger__bar--bar1"></span>
+			<span class="burger__bar burger__bar--bar2"></span>
+			<span class="burger__bar burger__bar--bar3"></span>
+		</button>
+
         <ul class="nav__list flex">
-            <li class="nav__item nav__item--home active flex"><a href="#home" class="nav__link" role="button" aria-pressed="true" tabindex=1><span class="fas fa-home"></span>Home</a></li>
-            <li class="nav__item nav__item--about flex"><a href="#about" class="nav__link" role="button" aria-pressed="true" tabindex=2><span class="far fa-lightbulb"></span>O nas</a></li>
-            <li class="nav__item nav__item--services flex"><a href="#services" class="nav__link" role="button" aria-pressed="true" tabindex=3><span class="fas fa-cogs"></span>Usługi</a></li>
-            <li class="nav__item nav__item--contact flex"><a href="#contact" class="nav__link" role="button" aria-pressed="true" tabindex=4><span class="fas fa-envelope"></span>Kontakt</a></li>
+            <li class="nav__item nav__item--home active flex"><a href="#strona-glowna" class="nav__link"><span class="fas fa-home"  aria-hidden="true"></span>Home</a></li>
+            <li class="nav__item nav__item--about flex"><a href="#o-nas" class="nav__link"><span class="far fa-lightbulb"  aria-hidden="true"></span>O nas</a></li>
+            <li class="nav__item nav__item--services flex"><a href="#uslugi" class="nav__link"><span class="fas fa-cogs" aria-hidden="true"></span>Usługi</a></li>
+            <li class="nav__item nav__item--contact flex"><a href="#kontakt" class="nav__link"><span class="fas fa-envelope" aria-hidden="true"></span></span>Kontakt</a></li>
         </ul>
     </nav>
 
-    <button class="burger no--js" type="button">
-        <span class="burger__bar burger__bar--bar1"></span>
-        <span class="burger__bar burger__bar--bar2"></span>
-        <span class="burger__bar burger__bar--bar3"></span>
-    </button>
-
-
-    <header id="home" class="section section--header flex">
-        <img src="img/logo.png" alt="logo firmy" class="logo">
+    <header id="strona-glowna" class="section section--header flex">
+        <a href ="#strona-glowna"><img src="img/logo.png" alt="Wróć na stronę główną" class="logo"></a>
         <div class="text__container text__container--header flex">
-            <h1 class="header__h1">Hydro<span  class="header__h1--red">geopol</span></h1>
-            <p class="header__p">przedsiębiorstwo hydrogeologiczne w dębicy</p>
+            <h1 class="header__main-heading">Hydro<span  class="main-heading--red">geopol</span></h1>
+            <p class="header__subheading">Przedsiębiorstwo hydrogeologiczne w Dębicy</p>
         </div>
 
-        <a href="#about" class="btn btn--header" role="button" aria-pressed="true">poznaj nas!</a>
+        <a href="#o-nas" class="btn btn--header">poznaj nas!</a>
 
     </header>
     <main>
-        <section id="about" class="section section--about flex">
+        <section id="o-nas" class="section section--about flex">
 
             <div class="text__container text__container--section flex">
                 <h2 class="section__title">o nas</h2>
@@ -87,12 +86,12 @@
 
         </section>
 
-        <section id="services" class="section section--services flex">
+        <section id="uslugi" class="section section--services flex">
             <h2 class="section__title">Nasze usługi</h2>
 
             <div class="container container--services flex">
                 <div class="service flex">
-                    <span class="title__no">1.</span>
+                  
                     <h3 class=" service__title">Prace projektowe i dokumentacyjne
                         wraz z wykonawstwem w zakresie</h3>
                     <ul class="service__list service__list--a no--js">
@@ -105,7 +104,7 @@
                 </div>
 
                 <div class="service flex">
-                    <span class="title__no">2.</span>
+                   
                     <h3 class="service__title">Wykonujemy następujące opracowania
                         geologiczne</h3>
                     <ul class="service__list service__list--b no--js">
@@ -128,7 +127,7 @@
                 </div>
 
                 <div class="service flex">
-                    <span class="title__no">3.</span>
+                    
                     <h3 class="service__title">Prace wiertnicze</h3>
                     <ul class="service__list service__list--c no--js">
                         <li>wiercenia studni głębinowych</li>
@@ -152,7 +151,7 @@
                 </div>
 
                 <div class="service flex">
-                    <span class="title__no">4.</span>
+                    
                     <h3 class="service__title">Usługi warsztatowe</h3>
                     <ul class="service__list service__list--d no--js">
                         <li>remonty urządzeń wiertniczych</li>
@@ -164,20 +163,19 @@
             </div>
         </section>
 
-    </main>
-    <section id="contact" class="section section--contact flex">
+    <section id="kontakt" class="section section--contact flex">
         <div class="container container--contact flex">
 
 
             <div class="container container--form flex">
                 <h2 class="section__title title--form">Napisz do nas</h2>
-                <form class="form flex" action="email_form.php" method="post">
+                <form class="form flex" action="" method="post">
 
-                    <label class="label" for="name">Imię*</label>
+                    <label class="label" for="name">Imię</label>
                     <input class="input" type="text" id="name" name="name" placeholder="wpisz swóje imię" required>
-                    <label class="label" for="email">E-mail*</label>
+                    <label class="label" for="email">E-mail</label>
                     <input class="input" type="email" id="email" name="email" placeholder="wpisz swój e-mail" required>
-                    <label class="label" for="msg">Wiadomość*</label>
+                    <label class="label" for="msg">Wiadomość</label>
                     <textarea class="input input--msg" id="msg" name="msg" placeholder="napisz wiadomość" required rows='5'></textarea>
                     <button class="btn btn--form" type="submit" name="submit">Wyślij</button>
                 </form>
@@ -189,10 +187,10 @@
                 <p class="address__subname">Przedsiębiorstwo hydrogeologiczne w Dębicy.</p>
                 <p>NIP 000-000-00-00</p>
                 <p>REGON 000000000</p>
-                <p class="address__post"><span class="fas fa-map-marker-alt"></span>39-200 Dębica, ul.Rzeszowska 131</p>
-                <p class="address__phone"><span class="fas fa-phone"></span>123 123 12 12</p>
-                <p class="address__fax"><span class="fas fa-fax"></span>123 123 12 12</p>
-                <a class="address__mail" href="mailto:xyz@xyz.pl"><span class="far fa-envelope"></span>biuro@xyz.pl</a>
+                <p class="address__post"><span class="fas fa-map-marker-alt" aria-label="adres"></span>39-200 Dębica, ul.Rzeszowska 131</p>
+                <a href="tel:1212312312"><p class="address__phone"><span class="fas fa-phone" aria-label="telefon"></span>123 123 12 12</p></a>
+                <a href="tel:1231231212"><p class="address__fax"><span class="fas fa-fax" aria-label="fax"></span>123 123 12 12</p></a>
+                <a class="address__mail" href="mailto:xyz@xyz.pl"><span class="far fa-envelope" aria-label="E-mail"></span>biuro@xyz.pl</a>
                 <p class="address__person">Adam Kowalski <a class="person__mail" href="mailto:xyz@xyz.pl">a.kowalski@xyz.pl</a></p>
                 <p class="address__person">Adam Nowak <a class="person__mail" href="mailto:d.pecak@hydrogeopol.pl">a.nowak@xyz</a></p>
             </address>
@@ -203,6 +201,8 @@
         </div>
     </section>
 
+    </main>
+	
     <footer class="footer">Copyright &copy; <a href="https://github.com/tomi5" target="blank" class="footer__link">Tomi5</a>
         2019</footer>
 

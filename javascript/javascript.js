@@ -1,17 +1,30 @@
 // remove class no--js 
 
 $(document).ready(function () {
-	$('body *').removeClass('no--js')
-});
-
-
+	$('.no--js').removeClass('no--js');
+	
+	
+	
 // show menu on mobile
 
 function toggleActive() {
 	$('.burger').toggleClass('active');
 	$('nav').toggleClass('active');
 	$('.section').toggleClass('blur');
+ 
+ let x = $('.burger').attr("aria-expanded"); 
+ if (x == "true") 
+  {
+ x = "false"
+ } else {
+ x = "true"
 }
+$('.burger').attr("aria-expanded", x);
+ 
+}
+	
+
+
 
 $('.burger').on('click', toggleActive);
 
@@ -21,29 +34,13 @@ $('.nav__link').on('click', function () {
 	}
 })
 
-// desactive mobile menu when window is resizing
-$(window).resize(function () {
-	$('.burger').removeClass('active');
-	$('nav').removeClass('active');
-	$('.section').removeClass('blur');
-});
-
-
 // scroll to section
 
-$('.nav__link').on('click', function () {
+$('.nav__link, .btn--header').on('click', function () {
 	const goToSection = $(this).attr('href');
 	$('body, html').animate({
 		scrollTop: $(goToSection).offset().top
 	}, 1000)
-})
-
-$('.btn--header').on('click', function () {
-	const goToSection = $(this).attr('href');
-	$('body, html').animate({
-		scrollTop: $(goToSection).offset().top
-	}, 1000)
-
 })
 
 
@@ -58,35 +55,35 @@ $(document).on('scroll', function () {
 	const $list3FromTop = $('.service__list--c').offset().top;
 	const $list4FromTop = $('.service__list--d').offset().top;
 
-	if ($scrollValue > $qualitiesFromTop - $windowHeight / 2) {
-		$('.container--qualities').addClass('active');
+	$('.container--qualities').addClass('no--visible');
+	$('.service__list').addClass('no--visible'); 
+		
+	if ($scrollValue > $qualitiesFromTop - $windowHeight / 1.5) {
+		$('.container--qualities').removeClass('no--visible');
 	}
-	if ($scrollValue > $list1FromTop - $windowHeight / 2) {
-		$('.service__list--a').addClass('active');
+	if ($scrollValue > $list1FromTop - $windowHeight / 1.5 ) {
+		$('.service__list--a').removeClass('no--visible');
 	}
-	if ($scrollValue > $list2FromTop - $windowHeight / 2) {
-		$('.service__list--b').addClass('active');
+	if ($scrollValue > $list2FromTop - $windowHeight / 1.5 ) {
+		$('.service__list--b').removeClass('no--visible');
 	}
-	if ($scrollValue > $list3FromTop - $windowHeight / 2) {
-		$('.service__list--c').addClass('active');
+	if ($scrollValue > $list3FromTop - $windowHeight / 1.5 ) {
+		$('.service__list--c').removeClass('no--visible');
 	}
-	if ($scrollValue > $list4FromTop - $windowHeight / 2) {
-		$('.service__list--d').addClass('active');
+	if ($scrollValue > $list4FromTop - $windowHeight / 1.5 ) {
+		$('.service__list--d').removeClass('no--visible');
 	}
-	if ($scrollValue < 300) {
-		$('.container--qualities').removeClass('active')
-		$('.service__list').removeClass('active'); // cleaner
-	}
+	
 })
 
 //menu active possition
 
 function activeMenu() {
 	const $scrollValue = $(window).scrollTop();
-	const $heightAbout = $('#about').offset().top;
+	const $heightAbout = $('#o-nas').offset().top;
 	const $heightQualities = $('.section--qualities').offset().top;
-	const $heightServices = $('#services').offset().top;
-	const $heightContact = $('#contact').offset().top;
+	const $heightServices = $('#uslugi').offset().top;
+	const $heightContact = $('#kontakt').offset().top;
 
 	if ($scrollValue < $heightAbout) {
 		$('.nav__item').removeClass('active');
@@ -105,3 +102,7 @@ function activeMenu() {
 	}
 }
 $(window).on("scroll", activeMenu)
+	
+	
+});
+
