@@ -20,7 +20,8 @@ html {
 }
 
 body {
-  counter-reset: section;                 
+  counter-reset: section;  
+	 overflow-x: hidden;
 }
 
 
