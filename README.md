@@ -1,4 +1,10 @@
-# hydrogeopol
-web for Hydrogeopol Company
+# HYDROGEOPOL COMPANY WEB SITE
 
-pure CSS, jQuery, RWD,
+
+##### Buiit with:
+- HTML 5
+- pure CSS
+- jQuery
+- RWD
+
+
