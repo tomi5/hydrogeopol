@@ -1,7 +1,7 @@
 # HYDROGEOPOL COMPANY WEB SITE
 
 
-## Buiit with:
+## Built with:
 - HTML 5
 - pure CSS
 - jQuery
